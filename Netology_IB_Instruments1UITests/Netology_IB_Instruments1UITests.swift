@@ -1,13 +1,13 @@
 //
-//  Netology_IB_InstrumentsUITests.swift
-//  Netology_IB_InstrumentsUITests
+//  Netology_IB_Instruments1UITests.swift
+//  Netology_IB_Instruments1UITests
 //
-//  Created by Mac on 17.04.2022.
+//  Created by Mac on 08.04.2022.
 //
 
 import XCTest
 
-class Netology_IB_InstrumentsUITests: XCTestCase {
+class Netology_IB_Instruments1UITests: XCTestCase {
 
     override func setUpWithError() throws {
         // Put setup code here. This method is called before the invocation of each test method in the class.
