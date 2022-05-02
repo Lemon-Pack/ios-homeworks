@@ -1,13 +1,13 @@
 //
-//  Netology_IB_Instruments1UITestsLaunchTests.swift
-//  Netology_IB_Instruments1UITests
+//  Netology_IB_InstrumentsUITestsLaunchTests.swift
+//  Netology_IB_InstrumentsUITests
 //
-//  Created by Mac on 08.04.2022.
+//  Created by Mac on 17.04.2022.
 //
 
 import XCTest
 
-class Netology_IB_Instruments1UITestsLaunchTests: XCTestCase {
+class Netology_IB_InstrumentsUITestsLaunchTests: XCTestCase {
 
     override class var runsForEachTargetApplicationUIConfiguration: Bool {
         true

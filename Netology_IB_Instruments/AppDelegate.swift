@@ -1,8 +1,8 @@
 //
 //  AppDelegate.swift
-//  Netology_IB_Instruments1
+//  Netology_IB_Instruments
 //
-//  Created by Mac on 08.04.2022.
+//  Created by Mac on 17.04.2022.
 //
 
 import UIKit
