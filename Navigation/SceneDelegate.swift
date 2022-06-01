@@ -20,7 +20,7 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
             let twoController = UINavigationController(rootViewController: ProfileViewController())
             oneController.tabBarItem.title = "Lenta"
             oneController.tabBarItem.image = UIImage(systemName: "character.bubble")
-            twoController.tabBarItem.title = "Prifile"
+            twoController.tabBarItem.title = "Profile"
             twoController.tabBarItem.image = UIImage(systemName: "person.circle")
             tabBar.viewControllers = [oneController, twoController]
             window?.rootViewController = tabBar

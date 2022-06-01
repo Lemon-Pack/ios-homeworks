@@ -10,10 +10,7 @@ import UIKit
 
 class ProfileHeaderView: UIView {
     private lazy var pressedButton: UIButton = {
-        let button = UIButton(frame: CGRect(x: 16,
-                                            y: 132,
-                                            width: 358,
-                                            height: 50))
+        let button = UIButton()
         button.setTitle("Show status", for: .normal)
         button.backgroundColor = UIColor.blue
         button.layer.shadowColor = UIColor.black.cgColor
@@ -37,7 +34,7 @@ class ProfileHeaderView: UIView {
         nameLable.font = .boldSystemFont(ofSize: 18)
         return nameLable
     }()
-    private lazy var status: UILabel = {
+    lazy var status: UILabel = {
         let status = UILabel()
         status.text = "Per aspera ad astra"
         status.font = .systemFont(ofSize: 14)
@@ -47,27 +44,32 @@ class ProfileHeaderView: UIView {
     override init(frame:CGRect) {
         super.init(frame: frame)
         addSubview(imageView)
+        imageView.translatesAutoresizingMaskIntoConstraints = false
         addSubview(nameLable)
+        nameLable.translatesAutoresizingMaskIntoConstraints = false
         addSubview(pressedButton)
+        pressedButton.translatesAutoresizingMaskIntoConstraints = false
         addSubview(status)
+        status.translatesAutoresizingMaskIntoConstraints = false
+        NSLayoutConstraint.activate([
+            imageView.leadingAnchor.constraint(equalTo: leadingAnchor, constant: 16),
+            imageView.topAnchor.constraint(equalTo: topAnchor, constant: 16),
+            imageView.widthAnchor.constraint(equalToConstant: 100),
+            imageView.heightAnchor.constraint(equalToConstant: 100),
+            nameLable.leadingAnchor.constraint(equalTo: imageView.trailingAnchor, constant: 16),
+            nameLable.trailingAnchor.constraint(equalTo: trailingAnchor, constant: -16),
+            nameLable.topAnchor.constraint(equalTo: topAnchor, constant: 27),
+            pressedButton.leadingAnchor.constraint(equalTo: leadingAnchor, constant: 16),
+            pressedButton.topAnchor.constraint(equalTo: topAnchor, constant: 132),
+            pressedButton.widthAnchor.constraint(equalToConstant: 358),
+            pressedButton.heightAnchor.constraint(equalToConstant: 50),
+            status.leadingAnchor.constraint(equalTo: imageView.trailingAnchor, constant: 16),
+            status.trailingAnchor.constraint(equalTo: trailingAnchor, constant: -16),
+            status.bottomAnchor.constraint(equalTo: pressedButton.topAnchor, constant: -34)
+        ])
     }
     required init?(coder: NSCoder) {
         fatalError("init(coder:) has not been implemented")
-    }
-    override func layoutSubviews() {
-        super.layoutSubviews()
-        imageView.frame = CGRect(x: 16,
-                                 y: 16,
-                                 width: 100,
-                                 height: 100)
-        nameLable.frame = CGRect(x: 16 + 100 + 16,
-                                 y: 27,
-                                 width: self.bounds.width - (16 + 100 + 16) - 16,
-                                 height: 32)
-        status.frame = CGRect(x: 132,
-                              y: 132 - 25 - 34,
-                              width: self.bounds.width - (16 + 100 + 16) - 16,
-                              height: 28)
     }
     @objc func buttonPressed() {
         print(status.text!)
