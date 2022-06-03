@@ -17,7 +17,7 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
             window = .init(windowScene: windowScene)
             let tabBar = UITabBarController()
             let oneController = UINavigationController(rootViewController: FeedViewController())
-            let twoController = UINavigationController(rootViewController: ProfileViewController())
+            let twoController = UINavigationController(rootViewController: LogInViewController())
             oneController.tabBarItem.title = "Lenta"
             oneController.tabBarItem.image = UIImage(systemName: "character.bubble")
             twoController.tabBarItem.title = "Profile"

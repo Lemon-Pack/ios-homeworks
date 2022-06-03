@@ -1,8 +1,8 @@
 //
-//  ProfileHeaderView.swift
+//  ProfileTableHeaderView.swift
 //  Navigation
 //
-//  Created by Mac on 30.05.2022.
+//  Created by Mac on 02.06.2022.
 //
 
 import Foundation
@@ -60,6 +60,7 @@ class ProfileHeaderView: UIView {
             nameLable.trailingAnchor.constraint(equalTo: trailingAnchor, constant: -16),
             nameLable.topAnchor.constraint(equalTo: topAnchor, constant: 27),
             pressedButton.leadingAnchor.constraint(equalTo: leadingAnchor, constant: 16),
+            pressedButton.trailingAnchor.constraint(equalTo: trailingAnchor, constant: -16),
             pressedButton.topAnchor.constraint(equalTo: topAnchor, constant: 132),
             pressedButton.widthAnchor.constraint(equalToConstant: 358),
             pressedButton.heightAnchor.constraint(equalToConstant: 50),

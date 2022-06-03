@@ -23,6 +23,7 @@ class PostViewController: UIViewController {
         view.backgroundColor = .blue
         title = post.title
         navigationItem.rightBarButtonItem = UIBarButtonItem(barButtonSystemItem: .camera , target: self, action: #selector(showInfo))
+        self.navigationController?.isNavigationBarHidden = true
     }
     @objc func showInfo() {
         let postt = InfoViewController()

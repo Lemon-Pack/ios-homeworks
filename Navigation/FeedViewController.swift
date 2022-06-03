@@ -17,6 +17,7 @@ class FeedViewController: UIViewController {
         }()
     override func viewDidLoad() {
         super.viewDidLoad()
+        self.navigationController?.isNavigationBarHidden = true
         view.backgroundColor = .cyan
         view.addSubview(postButton)
         postButton.translatesAutoresizingMaskIntoConstraints = false

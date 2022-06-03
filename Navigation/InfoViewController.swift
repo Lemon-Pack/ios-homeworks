@@ -16,6 +16,7 @@ class InfoViewController: UIViewController {
     }()
     override func viewDidLoad() {
         super.viewDidLoad()
+        self.navigationController?.isNavigationBarHidden = true
         view.backgroundColor = .systemBlue
         view.addSubview(alertButton)
         alertButton.translatesAutoresizingMaskIntoConstraints = false
