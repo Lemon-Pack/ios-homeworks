@@ -36,7 +36,6 @@ class PostTableViewCell: UITableViewCell {
         label.font = UIFont.systemFont(ofSize: 16)
         label.text = "Likes:"
         label.textColor = .black
-        
         return label
     }()
     private var viewsLabel: UILabel = {
@@ -48,7 +47,6 @@ class PostTableViewCell: UITableViewCell {
     }()
     override init(style: UITableViewCell.CellStyle, reuseIdentifier: String?) {
         super.init(style: style, reuseIdentifier: reuseIdentifier)
-        
         authorLabel.translatesAutoresizingMaskIntoConstraints = false
         contentView.addSubview(authorLabel)
         newsImageView.translatesAutoresizingMaskIntoConstraints = false

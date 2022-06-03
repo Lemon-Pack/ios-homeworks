@@ -15,9 +15,6 @@ class ProfileViewController: UIViewController {
         let tableView = UITableView(frame: .zero, style: .grouped)
         tableView.dataSource = self
         tableView.delegate = self
-        
-       
-      
         tableView.separatorInset = .zero
         tableView.register(PostTableViewCell.self, forCellReuseIdentifier: PostTableViewCell.indentifire)
         return tableView
@@ -25,7 +22,6 @@ class ProfileViewController: UIViewController {
     private lazy var news = Lenta.News()
     override func viewDidLoad() {
         super.viewDidLoad()
-        
         navigationController?.navigationBar.isHidden = true
         view.addSubview(profileHeaderView)
         profileHeaderView.translatesAutoresizingMaskIntoConstraints = false
@@ -62,8 +58,6 @@ extension ProfileViewController: UITableViewDataSource {
         func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
             return UITableView.automaticDimension
         }
-        
-        
     }
     extension ProfileViewController: UITextFieldDelegate {
         func textFieldShouldReturn(_ textField: UITextField) -> Bool {
